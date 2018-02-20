@@ -40,10 +40,10 @@ output reg [14:0] contmsec = 0;
 
 always @(posedge clk) begin
 	
-	if(contusec == 50) begin
+	if(contusec == 50) begin //Se cuantan 50 ciclos de clk que equivale a 1us
 		contusec = 0;
 		
-		if(contmsec == 20000) begin
+		if(contmsec == 20000) begin // se cuaenta 20ms
 			contmsec = 0;
 		end else begin
 			contmsec = contmsec + 1;
