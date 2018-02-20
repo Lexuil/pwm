@@ -89,5 +89,5 @@ iversim:  build/project.src
 	vvp simulation/$(DESIGN)_TB.vvp; mv $(DESIGN)_TB.vcd simulation/
 	gtkwave simulation/$(DESIGN)_TB.vcd&
 
-upload: $(DESIGN).bit
-scp $(DESIGN).bit root@$(SAKC_IP): 
+#upload:
+#scp $(DESIGN).bit pi@192.168.43.210:Documents/Digital2/pwm

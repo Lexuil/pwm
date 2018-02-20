@@ -58,6 +58,8 @@ Parsing module <pwm>.
 =========================================================================
 
 Elaborating module <pwm>.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 49: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 53: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -65,16 +67,42 @@ Elaborating module <pwm>.
 
 Synthesizing Unit <pwm>.
     Related source file is "/home/lexuil/Documents/Github/pwm/pwm.v".
-WARNING:Xst:647 - Input <pos> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    WARNING:Xst:2404 -  FFs/Latches <out<0:0>> (without init value) have a constant value of 0 in block <pwm>.
+    Found 6-bit register for signal <contusec>.
+    Found 15-bit register for signal <contmsec>.
+    Found 1-bit register for signal <out>.
+    Found 15-bit adder for signal <contmsec[14]_GND_1_o_add_19_OUT> created at line 49.
+    Found 6-bit adder for signal <contusec[5]_GND_1_o_add_21_OUT> created at line 53.
+    Found 1-bit 4-to-1 multiplexer for signal <pos[1]_out_Mux_15_o> created at line 14.
+    Found 15-bit comparator greater for signal <n0005> created at line 16
+    Found 15-bit comparator greater for signal <n0011> created at line 20
+    Found 15-bit comparator greater for signal <n0017> created at line 24
+    Found 15-bit comparator greater for signal <n0023> created at line 28
+    Found 15-bit comparator lessequal for signal <n0027> created at line 29
     Summary:
-	no macro.
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  11 Multiplexer(s).
 Unit <pwm> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 15-bit adder                                          : 1
+ 6-bit adder                                           : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 15-bit register                                       : 1
+ 6-bit register                                        : 1
+# Comparators                                          : 5
+ 15-bit comparator greater                             : 4
+ 15-bit comparator lessequal                           : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 10
+ 1-bit 4-to-1 multiplexer                              : 1
+
 =========================================================================
 
 =========================================================================
@@ -82,10 +110,27 @@ Found no macro
 =========================================================================
 
 
+Synthesizing (advanced) Unit <pwm>.
+The following registers are absorbed into counter <contusec>: 1 register on signal <contusec>.
+The following registers are absorbed into counter <contmsec>: 1 register on signal <contmsec>.
+Unit <pwm> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Counters                                             : 2
+ 15-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 5
+ 15-bit comparator greater                             : 4
+ 15-bit comparator lessequal                           : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 10
+ 1-bit 4-to-1 multiplexer                              : 1
+
 =========================================================================
 
 =========================================================================
@@ -96,14 +141,38 @@ Optimizing unit <pwm> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block pwm, actual ratio is 0.
+Found area constraint ratio of 100 (+ 0) on block pwm, actual ratio is 1.
+FlipFlop contusec_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contusec_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contusec_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contusec_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contusec_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contusec_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop contmsec_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+
 =========================================================================
 
 =========================================================================
@@ -125,10 +194,27 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 66
 #      GND                         : 1
-# IO Buffers                       : 1
-#      OBUF                        : 1
+#      INV                         : 2
+#      LUT1                        : 14
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 4
+#      LUT5                        : 1
+#      LUT6                        : 12
+#      MUXCY                       : 14
+#      VCC                         : 1
+#      XORCY                       : 15
+# FlipFlops/Latches                : 43
+#      FD                          : 1
+#      FDR                         : 12
+#      FDRE                        : 30
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 2
+#      OBUF                        : 22
 
 Device utilization summary:
 ---------------------------
@@ -137,19 +223,24 @@ Selected Device : 6slx4tqg144-2
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              21  out of   4800     0%  
+ Number of Slice LUTs:                   35  out of   2400     1%  
+    Number used as Logic:                35  out of   2400     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:     35
+   Number with an unused Flip Flop:      14  out of     35    40%  
+   Number with an unused LUT:             0  out of     35     0%  
+   Number of fully used LUT-FF pairs:    21  out of     35    60%  
+   Number of unique control sets:         3
 
 IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   1  out of    102     0%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    102    24%  
+    IOB Flip Flops/Latches:              22
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -169,7 +260,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 43    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -179,9 +274,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 5.878ns (Maximum Frequency: 170.139MHz)
+   Minimum input arrival time before clock: 4.824ns
+   Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -189,20 +284,92 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.878ns (frequency: 170.139MHz)
+  Total number of paths / destination ports: 1202 / 115
+-------------------------------------------------------------------------
+Delay:               5.878ns (Levels of Logic = 2)
+  Source:            contusec_4 (FF)
+  Destination:       contmsec_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: contusec_4 to contmsec_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.525   1.196  contusec_4 (contusec_4)
+     LUT6:I1->O           43   0.254   1.704  GND_1_o_GND_1_o_equal_18_o<5>1 (GND_1_o_GND_1_o_equal_18_o)
+     LUT6:I5->O           30   0.254   1.486  _n00703 (_n0070)
+     FDRE:R                    0.459          contmsec_0
+    ----------------------------------------
+    Total                      5.878ns (1.492ns logic, 4.386ns route)
+                                       (25.4% logic, 74.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 7 / 1
+-------------------------------------------------------------------------
+Offset:              4.824ns (Levels of Logic = 4)
+  Source:            pos<0> (PAD)
+  Destination:       out (FF)
+  Destination Clock: clk rising
+
+  Data Path: pos<0> to out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   1.296  pos_0_IBUF (pos_0_IBUF)
+     LUT6:I0->O            1   0.254   0.682  Mmux_pos[1]_out_Mux_15_o13 (Mmux_pos[1]_out_Mux_15_o12)
+     LUT6:I5->O            1   0.254   0.682  Mmux_pos[1]_out_Mux_15_o14 (Mmux_pos[1]_out_Mux_15_o13)
+     LUT6:I5->O            1   0.254   0.000  Mmux_pos[1]_out_Mux_15_o19 (pos[1]_out_Mux_15_o)
+     FD:D                      0.074          out
+    ----------------------------------------
+    Total                      4.824ns (2.164ns logic, 2.660ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            contusec_5_1 (FF)
+  Destination:       contusec<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: contusec_5_1 to contusec<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.525   0.681  contusec_5_1 (contusec_5_1)
+     OBUF:I->O                 2.912          contusec_5_OBUF (contusec<5>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.878|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.31 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 4.87 secs
  
 --> 
 
 
-Total memory usage is 377060 kilobytes
+Total memory usage is 385728 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
