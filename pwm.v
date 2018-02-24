@@ -7,9 +7,6 @@ module pwm(out,pos,clk,contusec,contmsec);
 	output reg out;
 
 always @(posedge clk) begin
-
-	if(contmsec == 2) out = 1;
-	if(contmsec != 2) out = 0;
 	
 	case(pos)
 		2'b00:begin			//Duty de 1ms con periodo de 20ms
