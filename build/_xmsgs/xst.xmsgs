@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lexuil/Documents/Github/pwm/counter.v" Line 24: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">15</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lexuil/Documents/Github/pwm/counter.v" Line 28: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pwm7/contusec_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pwm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pwm6/contusec_0&gt; &lt;pwm5/contusec_0&gt; &lt;pwm4/contusec_0&gt; &lt;pwm3/contusec_0&gt; &lt;pwm2/contusec_0&gt; &lt;pwm1/contusec_0&gt; &lt;pwm0/contusec_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pwm7/contusec_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pwm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pwm6/contusec_1&gt; &lt;pwm5/contusec_1&gt; &lt;pwm4/contusec_1&gt; &lt;pwm3/contusec_1&gt; &lt;pwm2/contusec_1&gt; &lt;pwm1/contusec_1&gt; &lt;pwm0/contusec_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pwm7/contusec_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pwm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pwm6/contusec_2&gt; &lt;pwm5/contusec_2&gt; &lt;pwm4/contusec_2&gt; &lt;pwm3/contusec_2&gt; &lt;pwm2/contusec_2&gt; &lt;pwm1/contusec_2&gt; &lt;pwm0/contusec_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pwm7/contusec_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pwm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pwm6/contusec_3&gt; &lt;pwm5/contusec_3&gt; &lt;pwm4/contusec_3&gt; &lt;pwm3/contusec_3&gt; &lt;pwm2/contusec_3&gt; &lt;pwm1/contusec_3&gt; &lt;pwm0/contusec_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pwm7/contusec_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pwm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pwm6/contusec_4&gt; &lt;pwm5/contusec_4&gt; &lt;pwm4/contusec_4&gt; &lt;pwm3/contusec_4&gt; &lt;pwm2/contusec_4&gt; &lt;pwm1/contusec_4&gt; &lt;pwm0/contusec_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pwm7/contusec_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pwm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pwm6/contusec_5&gt; &lt;pwm5/contusec_5&gt; &lt;pwm4/contusec_5&gt; &lt;pwm3/contusec_5&gt; &lt;pwm2/contusec_5&gt; &lt;pwm1/contusec_5&gt; &lt;pwm0/contusec_5&gt; </arg>
+</msg>
+
+</messages>
+

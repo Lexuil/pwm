@@ -1,0 +1,368 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc6slx4-2tqg144
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : pwm
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lexuil/Documents/Github/pwm/pwm.v" into library work
+Parsing module <pwm>.
+Analyzing Verilog file "/home/lexuil/Documents/Github/pwm/counter.v" into library work
+Parsing module <counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pwm>.
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/counter.v" Line 24: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/counter.v" Line 28: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/lexuil/Documents/Github/pwm/pwm.v".
+    Summary:
+	no macro.
+Unit <pwm> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/lexuil/Documents/Github/pwm/counter.v".
+    Found 15-bit register for signal <contmsec>.
+    Found 1-bit register for signal <state>.
+    Found 5-bit register for signal <dutyf>.
+    Found 5-bit register for signal <periodf>.
+    Found 6-bit register for signal <contusec>.
+    Found 6-bit subtractor for signal <GND_2_o_GND_2_o_sub_3_OUT> created at line 21.
+    Found 6-bit subtractor for signal <GND_2_o_GND_2_o_sub_13_OUT> created at line 34.
+    Found 15-bit adder for signal <contmsec[14]_GND_2_o_add_4_OUT> created at line 24.
+    Found 6-bit adder for signal <contusec[5]_GND_2_o_add_6_OUT> created at line 28.
+    Found 32-bit comparator lessequal for signal <n0002> created at line 21
+    Found 32-bit comparator lessequal for signal <n0012> created at line 34
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 32
+ 15-bit adder                                          : 8
+ 6-bit adder                                           : 8
+ 6-bit subtractor                                      : 16
+# Registers                                            : 40
+ 1-bit register                                        : 8
+ 15-bit register                                       : 8
+ 5-bit register                                        : 16
+ 6-bit register                                        : 8
+# Comparators                                          : 16
+ 32-bit comparator lessequal                           : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <contusec>: 1 register on signal <contusec>.
+The following registers are absorbed into counter <contmsec>: 1 register on signal <contmsec>.
+Unit <counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 6-bit subtractor                                      : 16
+# Counters                                             : 16
+ 15-bit up counter                                     : 8
+ 6-bit up counter                                      : 8
+# Registers                                            : 88
+ Flip-Flops                                            : 88
+# Comparators                                          : 16
+ 32-bit comparator lessequal                           : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pwm> ...
+INFO:Xst:2261 - The FF/Latch <pwm7/contusec_0> in Unit <pwm> is equivalent to the following 7 FFs/Latches, which will be removed : <pwm6/contusec_0> <pwm5/contusec_0> <pwm4/contusec_0> <pwm3/contusec_0> <pwm2/contusec_0> <pwm1/contusec_0> <pwm0/contusec_0> 
+INFO:Xst:2261 - The FF/Latch <pwm7/contusec_1> in Unit <pwm> is equivalent to the following 7 FFs/Latches, which will be removed : <pwm6/contusec_1> <pwm5/contusec_1> <pwm4/contusec_1> <pwm3/contusec_1> <pwm2/contusec_1> <pwm1/contusec_1> <pwm0/contusec_1> 
+INFO:Xst:2261 - The FF/Latch <pwm7/contusec_2> in Unit <pwm> is equivalent to the following 7 FFs/Latches, which will be removed : <pwm6/contusec_2> <pwm5/contusec_2> <pwm4/contusec_2> <pwm3/contusec_2> <pwm2/contusec_2> <pwm1/contusec_2> <pwm0/contusec_2> 
+INFO:Xst:2261 - The FF/Latch <pwm7/contusec_3> in Unit <pwm> is equivalent to the following 7 FFs/Latches, which will be removed : <pwm6/contusec_3> <pwm5/contusec_3> <pwm4/contusec_3> <pwm3/contusec_3> <pwm2/contusec_3> <pwm1/contusec_3> <pwm0/contusec_3> 
+INFO:Xst:2261 - The FF/Latch <pwm7/contusec_4> in Unit <pwm> is equivalent to the following 7 FFs/Latches, which will be removed : <pwm6/contusec_4> <pwm5/contusec_4> <pwm4/contusec_4> <pwm3/contusec_4> <pwm2/contusec_4> <pwm1/contusec_4> <pwm0/contusec_4> 
+INFO:Xst:2261 - The FF/Latch <pwm7/contusec_5> in Unit <pwm> is equivalent to the following 7 FFs/Latches, which will be removed : <pwm6/contusec_5> <pwm5/contusec_5> <pwm4/contusec_5> <pwm3/contusec_5> <pwm2/contusec_5> <pwm1/contusec_5> <pwm0/contusec_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block pwm, actual ratio is 19.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 214
+ Flip-Flops                                            : 214
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 704
+#      GND                         : 1
+#      INV                         : 25
+#      LUT1                        : 112
+#      LUT2                        : 17
+#      LUT3                        : 17
+#      LUT4                        : 81
+#      LUT5                        : 121
+#      LUT6                        : 9
+#      MUXCY                       : 200
+#      VCC                         : 1
+#      XORCY                       : 120
+# FlipFlops/Latches                : 214
+#      FD                          : 8
+#      FDE                         : 80
+#      FDR                         : 6
+#      FDRE                        : 120
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 18
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             206  out of   4800     4%  
+ Number of Slice LUTs:                  382  out of   2400    15%  
+    Number used as Logic:               382  out of   2400    15%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    390
+   Number with an unused Flip Flop:     184  out of    390    47%  
+   Number with an unused LUT:             8  out of    390     2%  
+   Number of fully used LUT-FF pairs:   198  out of    390    50%  
+   Number of unique control sets:        18
+
+IO Utilization: 
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    102    26%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 214   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.609ns (Maximum Frequency: 178.301MHz)
+   Minimum input arrival time before clock: 2.637ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.609ns (frequency: 178.301MHz)
+  Total number of paths / destination ports: 13945 / 380
+-------------------------------------------------------------------------
+Delay:               5.609ns (Levels of Logic = 5)
+  Source:            pwm7/periodf_4 (FF)
+  Destination:       pwm7/contmsec_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pwm7/periodf_4 to pwm7/contmsec_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.525   1.156  pwm7/periodf_4 (pwm7/periodf_4)
+     LUT5:I0->O            6   0.254   1.306  pwm7/Msub_GND_2_o_GND_2_o_sub_3_OUT_xor<5>11 (pwm7/GND_2_o_GND_2_o_sub_3_OUT<5>)
+     LUT5:I0->O            1   0.254   0.000  pwm7/Mcompar_GND_2_o_GND_2_o_LessThan_4_o_lut<3> (pwm7/Mcompar_GND_2_o_GND_2_o_LessThan_4_o_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  pwm7/Mcompar_GND_2_o_GND_2_o_LessThan_4_o_cy<3> (pwm7/Mcompar_GND_2_o_GND_2_o_LessThan_4_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  pwm7/Mcompar_GND_2_o_GND_2_o_LessThan_4_o_cy<4> (pwm7/GND_2_o_GND_2_o_LessThan_4_o)
+     MUXCY:CI->O          15   0.262   1.154  pwm7/_n00501_cy (pwm7/_n0050)
+     FDRE:R                    0.459          pwm7/contmsec_0
+    ----------------------------------------
+    Total                      5.609ns (1.993ns logic, 3.616ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 160 / 160
+-------------------------------------------------------------------------
+Offset:              2.637ns (Levels of Logic = 1)
+  Source:            servo<7> (PAD)
+  Destination:       pwm7/dutyf_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: servo<7> to pwm7/dutyf_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.328   1.007  servo_7_IBUF (servo_7_IBUF)
+     FDE:CE                    0.302          pwm7/periodf_0
+    ----------------------------------------
+    Total                      2.637ns (1.630ns logic, 1.007ns route)
+                                       (61.8% logic, 38.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            pwm7/state (FF)
+  Destination:       out<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: pwm7/state to out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  pwm7/state (pwm7/state)
+     OBUF:I->O                 2.912          out_7_OBUF (out<7>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.609|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.32 secs
+ 
+--> 
+
+
+Total memory usage is 385680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
