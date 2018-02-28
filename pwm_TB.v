@@ -1,65 +1,86 @@
 `timescale 1ns / 1ns
 
 module pwm_TB;
-	reg[7:0] servo;
-	reg[4:0] period;
-	reg[4:0] duty;
 	reg clk;
-	wire[7:0] out;
+	reg rst;
+	reg rd;
+	reg wr;
+	reg [31:0] din;
+	reg [6:0] adrs;
+	wire [31:0] dout;
+	wire [7:0] pwmo;
 	
-	pwm uut(.out(out), .clk(clk), .servo(servo), .period(period), .duty(duty));
+	pwm uut( .clk(clk), .rst(rst), .rd(rd), .wr(wr), .din(din), .adrs(adrs), .dout(dout), .pwmo(pwmo));
 	
 	//Clk modulo
 	initial         clk <= 1;
 	always #1 clk <= ~clk;
 
 	initial begin
-		servo = 8'b00000001;
-		period = 20;
-		duty = 2; #4800;
 		
-		servo = 8'b00000010;
-		period = 20;
-		duty = 5; #4800;
+		wr = 1;
+		din = 2;
+		adrs = 7'h08;
+		#2;
+		din = 20;
+		adrs = 7'h04;
+		#2;
+		din = 1;
+		adrs = 7'h00;
+		#2;
 		
+		din = 4;
+		adrs = 7'h14;
+		#2;
+		din = 20;
+		adrs = 7'h10;
+		#2;
+		din = 1;
+		adrs = 7'h0c;
+		#2;
 		
-		servo = 8'b00000100;
-		period = 20;
-		duty = 1; #4800;
+		din = 2;
+		adrs = 7'h20;
+		#2;
+		din = 20;
+		adrs = 7'h1c;
+		#2;
+		din = 1;
+		adrs = 7'h18;
+		#2;
 		
+		din = 2;
+		adrs = 7'h44;
+		#2;
+		din = 20;
+		adrs = 7'h40;
+		#2;
+		din = 1;
+		adrs = 7'h3c;
+		#2;
 		
-		servo = 8'b00001000;
-		period = 20;
-		duty = 7; #4800;
+		din = 2;
+		adrs = 7'h5c;
+		#2;
+		din = 20;
+		adrs = 7'h58;
+		#2;
+		din = 1;
+		adrs = 7'h54;
+		#2;
 		
+		wr = 0;
+		rd = 1;
+		adrs = 7'h04;
+		#2;
+		adrs = 7'h18;
+		#2;
+		adrs = 7'h5c;
+		#2;
+		adrs = 7'h00;
+		#2;
+		adrs = 7'h0;
 		
-		servo = 8'b00010000;
-		period = 20;
-		duty = 3; #4800;
-		
-		
-		servo = 8'b00100000;
-		period = 20;
-		duty = 8; #4800;
-		
-		servo = 8'b01000000;
-		period = 20;
-		duty = 6; #4800;
-		
-		
-		servo = 8'b10000000;
-		period = 20;
-		duty = 2; #4800;
-		
-		
-		servo = 8'b00000100;
-		period = 20;
-		duty = 8; #4800;
-		
-		
-		servo = 8'b0100000;
-		period = 20;
-		duty = 1; #4800;
 		
 		
 	end
