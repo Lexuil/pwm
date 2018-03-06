@@ -12,73 +12,78 @@ module pwm_TB;
 	
 	pwm uut( .clk(clk), .rst(rst), .rd(rd), .wr(wr), .din(din), .adrs(adrs), .dout(dout), .pwmo(pwmo));
 	
-	//Clk modulo
-	initial         clk <= 1;
-	always #1 clk <= ~clk;
+parameter tck              = 20;       // clock period in ns
+parameter uart_baud_rate   = 1152000;  // uart baud rate for simulation 
+
+parameter clk_freq = 1000000000 / tck; // Frequenzy in HZ
+	
+/* Clocking device */
+initial         clk <= 0;
+always #(tck/2) clk <= ~clk;
 
 	initial begin
 		
 		wr = 1;
 		din = 2;
 		adrs = 7'h08;
-		#2;
+		#20;
 		din = 20;
 		adrs = 7'h04;
-		#2;
+		#20;
 		din = 1;
 		adrs = 7'h00;
-		#2;
+		#20;
 		
 		din = 4;
 		adrs = 7'h14;
-		#2;
+		#20;
 		din = 20;
 		adrs = 7'h10;
-		#2;
+		#20;
 		din = 1;
 		adrs = 7'h0c;
-		#2;
+		#20;
 		
 		din = 2;
 		adrs = 7'h20;
-		#2;
+		#20;
 		din = 20;
 		adrs = 7'h1c;
-		#2;
+		#20;
 		din = 1;
 		adrs = 7'h18;
-		#2;
+		#20;
 		
 		din = 2;
 		adrs = 7'h44;
-		#2;
+		#20;
 		din = 20;
 		adrs = 7'h40;
-		#2;
+		#20;
 		din = 1;
 		adrs = 7'h3c;
-		#2;
+		#20;
 		
 		din = 2;
 		adrs = 7'h5c;
-		#2;
+		#20;
 		din = 20;
 		adrs = 7'h58;
-		#2;
+		#20;
 		din = 1;
 		adrs = 7'h54;
-		#2;
+		#20;
 		
 		wr = 0;
 		rd = 1;
 		adrs = 7'h04;
-		#2;
+		#20;
 		adrs = 7'h18;
-		#2;
+		#20;
 		adrs = 7'h5c;
-		#2;
+		#20;
 		adrs = 7'h00;
-		#2;
+		#20;
 		adrs = 7'h0;
 		
 		
@@ -88,7 +93,7 @@ module pwm_TB;
 	initial begin: TEST_CASE
 		$dumpfile("pwm_TB.vcd");
 		$dumpvars(-1,uut);
-		#(100000) $finish;
+		#(tck*20000) $finish;
 	end
 
 endmodule
