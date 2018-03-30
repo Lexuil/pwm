@@ -1,44 +1,42 @@
-`timescale 1ms / 1ns
-
-module pwm(clk,rst,rd,wr,din,adrs,dout,pwmo);
+module pwm(clk,rd,wr,din,adrs,dout,pwmo);
 	
 	input clk;
-	input rst;
+	//input rst;
 	input rd;
 	input wr;
-	input [31:00] din;
+	input [7:0] din;
 	input [6:0] adrs;
-	output reg [31:00] dout;
+	output reg [7:00] dout;
 	output [7:0] pwmo;
 	
-reg [31:00] dinf;
+reg [7:00] dinf;
 
-reg [31:00] period0;
-reg [31:00] period1;
-reg [31:00] period2;
-reg [31:00] period3;
-reg [31:00] period4;
-reg [31:00] period5;
-reg [31:00] period6;
-reg [31:00] period7;
+reg [7:00] period0 = 200;
+reg [7:00] period1 = 200;
+reg [7:00] period2 = 200;
+reg [7:00] period3 = 200;
+reg [7:00] period4 = 200;
+reg [7:00] period5 = 200;
+reg [7:00] period6 = 200;
+reg [7:00] period7 = 200;
 
-reg [31:00] duty0;
-reg [31:00] duty1;
-reg [31:00] duty2;
-reg [31:00] duty3;
-reg [31:00] duty4;
-reg [31:00] duty5;
-reg [31:00] duty6;
-reg [31:00] duty7;
+reg [7:00] duty0 = 0;
+reg [7:00] duty1 = 0;
+reg [7:00] duty2 = 0;
+reg [7:00] duty3 = 0;
+reg [7:00] duty4 = 0;
+reg [7:00] duty5 = 0;
+reg [7:00] duty6 = 0;
+reg [7:00] duty7 = 0;
 
-reg en0;
-reg en1;
-reg en2;
-reg en3;
-reg en4;
-reg en5;
-reg en6;
-reg en7;
+reg en0 = 1;
+reg en1 = 1;
+reg en2 = 1;
+reg en3 = 0;
+reg en4 = 0;
+reg en5 = 0;
+reg en6 = 0;
+reg en7 = 0;
 
 	
 counter pwm0(.clk(clk), .period(period0), .duty(duty0), .state(pwmo[0]), .en(en0));
@@ -99,37 +97,37 @@ counter pwm7(.clk(clk), .period(period7), .duty(duty7), .state(pwmo[7]), .en(en7
 		if(rd == 1) begin
 			
 			case(adrs)
-				6'h00: dout = en0;
-				6'h04: dout = period0;
-				6'h08: dout = duty0;
+				7'h00: dout = en0;
+				7'h04: dout = period0;
+				7'h08: dout = duty0;
 				
-				6'h0c: dout = en1;
-				6'h10: dout = period1;
-				6'h14: dout = duty1;
+				7'h0c: dout = en1;
+				7'h10: dout = period1;
+				7'h14: dout = duty1;
 				
-				6'h18: dout = en2;
-				6'h1c: dout = period2;
-				6'h20: dout = duty2;
+				7'h18: dout = en2;
+				7'h1c: dout = period2;
+				7'h20: dout = duty2;
 				
-				6'h24: dout = en3;
-				6'h28: dout = period3;
-				6'h2c: dout = duty3;
+				7'h24: dout = en3;
+				7'h28: dout = period3;
+				7'h2c: dout = duty3;
 				
-				6'h30: dout = en4;
-				6'h34: dout = period4;
-				6'h38: dout = duty4;
+				7'h30: dout = en4;
+				7'h34: dout = period4;
+				7'h38: dout = duty4;
 				
-				6'h3c: dout = en5;
-				6'h40: dout = period5;
-				6'h44: dout = duty5;
+				7'h3c: dout = en5;
+				7'h40: dout = period5;
+				7'h44: dout = duty5;
 				
-				6'h48: dout = en6;
-				6'h4c: dout = period6;
-				6'h50: dout = duty6;
+				7'h48: dout = en6;
+				7'h4c: dout = period6;
+				7'h50: dout = duty6;
 				
-				6'h54: dout = en7;
-				6'h58: dout = period7;
-				6'h5c: dout = duty7;
+				7'h54: dout = en7;
+				7'h58: dout = period7;
+				7'h5c: dout = duty7;
 				
 			default
 				dinf = din;

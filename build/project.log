@@ -1,0 +1,558 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc6slx4-2tqg144
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : pwm
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lexuil/Documents/Github/pwm/pwm.v" into library work
+Parsing module <pwm>.
+Analyzing Verilog file "/home/lexuil/Documents/Github/pwm/counter.v" into library work
+Parsing module <counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pwm>.
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/counter.v" Line 22: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/counter.v" Line 26: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 59: Result of 6-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 63: Result of 6-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 67: Result of 6-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 69: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 71: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 72: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 73: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 75: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 76: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 77: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 79: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 80: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 81: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 83: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 84: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 85: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 87: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 88: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 89: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 110: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 112: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 113: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 114: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 116: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 117: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 118: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 120: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 121: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 122: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 124: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 125: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 126: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 128: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 129: case condition never applies
+WARNING:HDLCompiler:295 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 130: case condition never applies
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 17: Net <period3[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 18: Net <period4[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 19: Net <period5[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 20: Net <period6[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 21: Net <period7[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 25: Net <duty2[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 26: Net <duty3[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 27: Net <duty4[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 28: Net <duty5[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 29: Net <duty6[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 30: Net <duty7[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 35: Net <en3> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 36: Net <en4> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 37: Net <en5> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 38: Net <en6> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lexuil/Documents/Github/pwm/pwm.v" Line 39: Net <en7> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pwm>.
+    Related source file is "/home/lexuil/Documents/Github/pwm/pwm.v".
+WARNING:Xst:2935 - Signal 'period3', unconnected in block 'pwm', is tied to its initial value (11001000).
+WARNING:Xst:2935 - Signal 'period4', unconnected in block 'pwm', is tied to its initial value (11001000).
+WARNING:Xst:2935 - Signal 'period5', unconnected in block 'pwm', is tied to its initial value (11001000).
+WARNING:Xst:2935 - Signal 'period6', unconnected in block 'pwm', is tied to its initial value (11001000).
+WARNING:Xst:2935 - Signal 'period7', unconnected in block 'pwm', is tied to its initial value (11001000).
+WARNING:Xst:2935 - Signal 'duty2', unconnected in block 'pwm', is tied to its initial value (00000000).
+WARNING:Xst:2935 - Signal 'duty3', unconnected in block 'pwm', is tied to its initial value (00000000).
+WARNING:Xst:2935 - Signal 'duty4', unconnected in block 'pwm', is tied to its initial value (00000000).
+WARNING:Xst:2935 - Signal 'duty5', unconnected in block 'pwm', is tied to its initial value (00000000).
+WARNING:Xst:2935 - Signal 'duty6', unconnected in block 'pwm', is tied to its initial value (00000000).
+WARNING:Xst:2935 - Signal 'duty7', unconnected in block 'pwm', is tied to its initial value (00000000).
+WARNING:Xst:2935 - Signal 'en3', unconnected in block 'pwm', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'en4', unconnected in block 'pwm', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'en5', unconnected in block 'pwm', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'en6', unconnected in block 'pwm', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'en7', unconnected in block 'pwm', is tied to its initial value (0).
+    Found 8-bit register for signal <period0>.
+    Found 8-bit register for signal <duty0>.
+    Found 1-bit register for signal <en1>.
+    Found 8-bit register for signal <period1>.
+    Found 8-bit register for signal <duty1>.
+    Found 1-bit register for signal <en2>.
+    Found 8-bit register for signal <period2>.
+    Found 8-bit register for signal <dout>.
+    Found 1-bit register for signal <en0>.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0101> created at line 99.
+    Summary:
+	inferred  51 D-type flip-flop(s).
+	inferred  17 Multiplexer(s).
+Unit <pwm> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/lexuil/Documents/Github/pwm/counter.v".
+    Found 15-bit register for signal <contmsec>.
+    Found 1-bit register for signal <state>.
+    Found 6-bit register for signal <contusec>.
+    Found 16-bit subtractor for signal <GND_2_o_GND_2_o_sub_5_OUT> created at line 19.
+    Found 16-bit subtractor for signal <GND_2_o_GND_2_o_sub_19_OUT> created at line 35.
+    Found 15-bit adder for signal <contmsec[14]_GND_2_o_add_6_OUT> created at line 22.
+    Found 6-bit adder for signal <contusec[5]_GND_2_o_add_8_OUT> created at line 26.
+    Found 8x7-bit multiplier for signal <period[7]_PWR_2_o_MuLt_3_OUT> created at line 19.
+    Found 8x7-bit multiplier for signal <duty[7]_PWR_2_o_MuLt_17_OUT> created at line 35.
+    Found 32-bit comparator lessequal for signal <n0003> created at line 19
+    Found 32-bit comparator lessequal for signal <n0017> created at line 35
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 16
+ 8x7-bit multiplier                                    : 16
+# Adders/Subtractors                                   : 32
+ 15-bit adder                                          : 8
+ 16-bit subtractor                                     : 16
+ 6-bit adder                                           : 8
+# Registers                                            : 33
+ 1-bit register                                        : 11
+ 15-bit register                                       : 8
+ 6-bit register                                        : 8
+ 8-bit register                                        : 6
+# Comparators                                          : 16
+ 32-bit comparator lessequal                           : 16
+# Multiplexers                                         : 17
+ 1-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 12
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <contmsec_11> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_10> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_9> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_8> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_7> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_6> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_5> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_4> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_3> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_2> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_1> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_0> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <state> (without init value) has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_14> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_13> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_12> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_11> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_10> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_9> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_8> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <state> (without init value) has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_14> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_13> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_12> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_11> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_10> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_9> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_8> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_7> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_6> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_5> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_4> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_3> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_2> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_1> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_0> has a constant value of 0 in block <pwm7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <state> (without init value) has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_14> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_13> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_12> has a constant value of 0 in block <pwm6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_3> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_2> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_1> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_0> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <state> (without init value) has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_14> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_13> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_12> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_11> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_10> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_9> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_8> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_7> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_6> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_5> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_4> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_3> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_2> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_1> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_0> has a constant value of 0 in block <pwm3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_7> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_6> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_5> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_4> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_3> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_2> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_1> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_0> has a constant value of 0 in block <pwm5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <state> (without init value) has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_14> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_13> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_12> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_11> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_10> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_9> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_8> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_7> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_6> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_5> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <contmsec_4> has a constant value of 0 in block <pwm4>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <contusec>: 1 register on signal <contusec>.
+The following registers are absorbed into counter <contmsec>: 1 register on signal <contmsec>.
+	Multiplier <Mmult_period[7]_PWR_2_o_MuLt_3_OUT> in block <counter> and adder/subtractor <Msub_GND_2_o_GND_2_o_sub_5_OUT> in block <counter> are combined into a MAC<Maddsub_period[7]_PWR_2_o_MuLt_3_OUT>.
+	Multiplier <Mmult_duty[7]_PWR_2_o_MuLt_17_OUT> in block <counter> and adder/subtractor <Msub_GND_2_o_GND_2_o_sub_19_OUT> in block <counter> are combined into a MAC<Maddsub_duty[7]_PWR_2_o_MuLt_17_OUT>.
+Unit <counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 16
+ 8x7-to-16-bit MAC                                     : 16
+# Counters                                             : 16
+ 15-bit up counter                                     : 8
+ 6-bit up counter                                      : 8
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+# Comparators                                          : 16
+ 32-bit comparator lessequal                           : 16
+# Multiplexers                                         : 17
+ 1-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 12
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <pwm7/state> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pwm6/state> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pwm5/state> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pwm4/state> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pwm3/state> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <pwm> ...
+WARNING:Xst:1293 - FF/Latch <duty0_6> has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <duty0_7> has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <duty1_6> has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <duty1_7> has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <period0_6> in Unit <pwm> is equivalent to the following FF/Latch, which will be removed : <period0_7> 
+INFO:Xst:2261 - The FF/Latch <period1_6> in Unit <pwm> is equivalent to the following FF/Latch, which will be removed : <period1_7> 
+INFO:Xst:2261 - The FF/Latch <period2_6> in Unit <pwm> is equivalent to the following FF/Latch, which will be removed : <period2_7> 
+INFO:Xst:2261 - The FF/Latch <dout_6> in Unit <pwm> is equivalent to the following FF/Latch, which will be removed : <dout_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block pwm, actual ratio is 12.
+FlipFlop dout_6 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 110
+ Flip-Flops                                            : 110
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 361
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 42
+#      LUT2                        : 6
+#      LUT3                        : 13
+#      LUT4                        : 103
+#      LUT5                        : 17
+#      LUT6                        : 36
+#      MUXCY                       : 90
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 45
+# FlipFlops/Latches                : 110
+#      FD                          : 35
+#      FDE                         : 12
+#      FDRE                        : 63
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 29
+#      IBUF                        : 13
+#      OBUF                        : 16
+# DSPs                             : 6
+#      DSP48A1                     : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              99  out of   4800     2%  
+ Number of Slice LUTs:                  223  out of   2400     9%  
+    Number used as Logic:               223  out of   2400     9%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    224
+   Number with an unused Flip Flop:     125  out of    224    55%  
+   Number with an unused LUT:             1  out of    224     0%  
+   Number of fully used LUT-FF pairs:    98  out of    224    43%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    102    29%  
+    IOB Flip Flops/Latches:              11
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      6  out of      8    75%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 112   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 10.687ns (Maximum Frequency: 93.567MHz)
+   Minimum input arrival time before clock: 6.337ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.687ns (frequency: 93.567MHz)
+  Total number of paths / destination ports: 14303 / 250
+-------------------------------------------------------------------------
+Delay:               10.687ns (Levels of Logic = 9)
+  Source:            pwm1/Maddsub_duty[7]_PWR_2_o_MuLt_17_OUT (DSP)
+  Destination:       pwm1/state (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pwm1/Maddsub_duty[7]_PWR_2_o_MuLt_17_OUT to pwm1/state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->P1       2   7.889   1.002  pwm1/Maddsub_duty[7]_PWR_2_o_MuLt_17_OUT (pwm1/GND_2_o_GND_2_o_sub_19_OUT<1>)
+     LUT4:I0->O            0   0.254   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_lutdi (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<0> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<1> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<2> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<3> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<4> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<5> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<5>)
+     MUXCY:CI->O           1   0.235   0.682  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<6> (pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<6>)
+     LUT4:I3->O            1   0.254   0.000  pwm1/Mcompar_GND_2_o_GND_2_o_LessThan_20_o_cy<7> (pwm1/GND_2_o_GND_2_o_LessThan_20_o)
+     FDE:D                     0.074          pwm1/state
+    ----------------------------------------
+    Total                     10.687ns (9.003ns logic, 1.684ns route)
+                                       (84.2% logic, 15.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 532 / 65
+-------------------------------------------------------------------------
+Offset:              6.337ns (Levels of Logic = 5)
+  Source:            adrs<1> (PAD)
+  Destination:       dout_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: adrs<1> to dout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.328   1.104  adrs_1_IBUF (adrs_1_IBUF)
+     LUT3:I0->O           28   0.235   1.883  Mmux__n0101111 (Mmux__n010111)
+     LUT6:I1->O            3   0.254   1.042  Mmux_duty0[7]_adrs[4]_mux_20_OUT11 (duty0[7]_adrs[4]_mux_20_OUT<0>)
+     LUT6:I2->O            1   0.254   0.000  Mmux__n0101_4 (Mmux__n0101_4)
+     MUXF7:I0->O           1   0.163   0.000  Mmux__n0101_2_f7 (_n0101<0>)
+     FDE:D                     0.074          dout_0
+    ----------------------------------------
+    Total                      6.337ns (2.308ns logic, 4.029ns route)
+                                       (36.4% logic, 63.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            dout_6_1 (FF)
+  Destination:       dout<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dout_6_1 to dout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   0.681  dout_6_1 (dout_6_1)
+     OBUF:I->O                 2.912          dout_7_OBUF (dout<7>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.687|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.92 secs
+ 
+--> 
+
+
+Total memory usage is 386152 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  158 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

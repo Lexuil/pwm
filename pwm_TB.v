@@ -2,7 +2,7 @@
 
 module pwm_TB;
 	reg clk;
-	reg rst;
+	//reg rst;
 	reg rd;
 	reg wr;
 	reg [31:0] din;
@@ -10,7 +10,7 @@ module pwm_TB;
 	wire [31:0] dout;
 	wire [7:0] pwmo;
 	
-	pwm uut( .clk(clk), .rst(rst), .rd(rd), .wr(wr), .din(din), .adrs(adrs), .dout(dout), .pwmo(pwmo));
+	pwm uut( .clk(clk), .rd(rd), .wr(wr), .din(din), .adrs(adrs), .dout(dout), .pwmo(pwmo));
 	
 parameter tck              = 20;       // clock period in ns
 parameter uart_baud_rate   = 1152000;  // uart baud rate for simulation 
