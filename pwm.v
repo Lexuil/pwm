@@ -1,37 +1,37 @@
-module pwm(clk,rd,wr,din,adrs,dout,pwmo);
+module pwm(clk,rst,rd,wr,din,adrs,dout,pwmo);
 	
 	input clk;
-	//input rst;
+	input rst;
 	input rd;
 	input wr;
 	input [7:0] din;
 	input [6:0] adrs;
-	output reg [7:00] dout;
+	output reg [7:0] dout;
 	output [7:0] pwmo;
 	
-reg [7:00] dinf;
+reg [7:0] dinf;
 
-reg [7:00] period0 = 200;
-reg [7:00] period1 = 200;
-reg [7:00] period2 = 200;
-reg [7:00] period3 = 200;
-reg [7:00] period4 = 200;
-reg [7:00] period5 = 200;
-reg [7:00] period6 = 200;
-reg [7:00] period7 = 200;
+reg [7:0] period0 = 0;
+reg [7:0] period1 = 0;
+reg [7:0] period2 = 0;
+reg [7:0] period3 = 0;
+reg [7:0] period4 = 0;
+reg [7:0] period5 = 0;
+reg [7:0] period6 = 0;
+reg [7:0] period7 = 0;
 
-reg [7:00] duty0 = 0;
-reg [7:00] duty1 = 0;
-reg [7:00] duty2 = 0;
-reg [7:00] duty3 = 0;
-reg [7:00] duty4 = 0;
-reg [7:00] duty5 = 0;
-reg [7:00] duty6 = 0;
-reg [7:00] duty7 = 0;
+reg [7:0] duty0 = 0;
+reg [7:0] duty1 = 0;
+reg [7:0] duty2 = 0;
+reg [7:0] duty3 = 0;
+reg [7:0] duty4 = 0;
+reg [7:0] duty5 = 0;
+reg [7:0] duty6 = 0;
+reg [7:0] duty7 = 0;
 
-reg en0 = 1;
-reg en1 = 1;
-reg en2 = 1;
+reg en0 = 0;
+reg en1 = 0;
+reg en2 = 0;
 reg en3 = 0;
 reg en4 = 0;
 reg en5 = 0;
@@ -50,6 +50,35 @@ counter pwm7(.clk(clk), .period(period7), .duty(duty7), .state(pwmo[7]), .en(en7
 
 	
 	always @(posedge clk) begin
+
+		if (rst) begin
+			period0 = 0;
+			period1 = 0;
+			period2 = 0;
+			period3 = 0;
+			period4 = 0;
+			period5 = 0;
+			period6 = 0;
+			period7 = 0;
+
+			duty0 = 0;
+			duty1 = 0;
+			duty2 = 0;
+			duty3 = 0;
+			duty4 = 0;
+			duty5 = 0;
+			duty6 = 0;
+			duty7 = 0;
+
+			en0 = 0;
+			en1 = 0;
+			en2 = 0;
+			en3 = 0;
+			en4 = 0;
+			en5 = 0;
+			en6 = 0;
+			en7 = 0;
+		end
 	
 		if(wr == 1) begin
 			

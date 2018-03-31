@@ -1,4 +1,4 @@
-module counter(clk,period,duty,state,en); //period y duty en ms
+module counter(clk,period,duty,state,en); //period y duty en us
 	
 	input clk;
 	input en;
@@ -16,7 +16,7 @@ always @(posedge clk) begin
 		if(contusec == 50) begin //Se cuantan 50 ciclos de clk que equivale a 1us (para clk de 50MHz)
 			contusec = 0;
 		
-			if(contmsec >= (period*100)-1) begin // se cuaenta period ms
+			if(contmsec >= (period*100)-1) begin // se cuaenta period us
 				contmsec = 0;
 			end else begin
 				contmsec = contmsec + 1;
