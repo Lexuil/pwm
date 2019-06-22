@@ -1,2 +1,3 @@
-PWM 8 output verilog code
-Matrix creator (xc6slx4-2tqg144)
+# PWM verilog
+
+Modulo de 8 PWM diseñado en verilog.
